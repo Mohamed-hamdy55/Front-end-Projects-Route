@@ -1,0 +1,180 @@
+/*Laptop Large*/
+@media (max-width:1024px) {
+    /* container for all contents */
+    .container{
+        max-width:990px;
+    }
+}
+
+@media (max-width: 992px) {
+    /* container for all contents */
+    .container{
+        max-width:970px;
+    }
+    /* About section */
+    .about-section .about-desc{
+        width: 50%;
+        margin-inline: 0;
+    }
+    .about-section .about-desc .personal-details > ul > li{
+        font-size: 14px;
+    }
+    .about-section .about-image-box{
+        width: 50%;
+        border: 0;
+        margin-inline: 0;
+        box-shadow: 2px 2px 5px #555555;
+    }
+    .about-section .about-image-box .about-image{
+        inset: 0;
+    }
+    /* Service Section */
+    .services-section .section-content .service-card{
+        width: 50%;
+    }
+    /* portfolio section */
+    .portfolio-section .section-content .portfolio-card{
+        width: 50%;
+    }
+    /* Blog Section */
+    .blog-section .section-content .blog-card .blog-card-inner .blog-title{
+        font-size: 19px;
+    }
+}
+/* devices smaller than tablet */
+@media (max-width:768px){
+    /* container for all contents */
+    .container{
+        max-width:750px;
+    }
+    /* toggle burger */
+    header nav > .toggle-menu-btn{
+        display: block;
+    }
+    header nav > ul{
+        display: none;
+        float: none;
+    }
+    header nav > ul > li{
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+    header nav > .toggle-menu-btn:hover + ul{
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #555555;
+    }
+    /* home section */
+    .home-section .home-details h3{
+        font-size: 20px;
+    }
+    .home-section .home-details h1{
+        font-size: 35px;
+    }
+    .home-section .home-details h4{
+        font-size: 18px;
+    }
+    /* about section */
+    .about-section .about-image-box, .about-section .about-desc{
+        float: none;
+        padding-inline: 0;
+        margin-inline: auto;
+        width: 70%;
+    }
+    .about-section .about-desc .personal-details > ul > li{
+        float: none;
+        width: 100%;
+        font-size: 16px;
+    }
+    .about-section .about-desc .personal-details .about-btns .btn{
+        padding: 8px 10px;
+    }
+    /* Service Section */
+    .services-section .section-content .service-card{
+        float: none;
+        width: 100%;
+    }
+    /* Portfolio Section */
+    .portfolio-section .section-content .portfolio-card{
+        width: 100%;
+    }
+    /* Extra Section 'Funfacts */
+    .funfacts-section .section-content .funfacts-card{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    /* Testimonial Section */
+    .testimonial-section .section-content .testimonial-card{
+        padding: 20px;
+        width: 80%;
+    }
+    .testimonial-section .section-content .testimonial-card .testimonial-card-image,
+    .testimonial-section .section-content .testimonial-card .testimonial-card-content{
+        float: none;
+        padding: 0;
+    }
+    .testimonial-section .section-content .testimonial-card .testimonial-card-image{
+        margin-inline: auto;
+        margin-bottom: 40px;
+    }
+    .testimonial-section .section-content .testimonial-card .testimonial-card-content{
+        width: 100%;
+    }
+    /* Blog Section */
+    .blog-section .section-content .blog-card{
+        float: none;
+        width: 70%;
+        margin-inline: auto;
+        padding-inline: 0;
+    }
+    /* Contact Us Section */
+    .contact-section .section-content form{
+        width: 90%;
+    }
+    .contact-section .section-content form .user-info input{
+        float: none;
+        width: 100%;
+    }
+}
+/* Mobile Large*/
+@media (max-width:470px){
+    .container{
+        width: 100%;
+    }
+    /* about section */
+    .about-section .about-desc, .about-section .about-image-box{
+        width: 100%;
+    }
+    /* Testimonial Section */
+    .testimonial-section .section-content .testimonial-card{
+        padding: 10px;
+        width: 90%
+    }
+    /* Blog Section */
+    .blog-section .section-content .blog-card{
+        width: 100%;
+    }
+}
+/* Mobile Meduim, Small and very small*/
+@media (max-width:375px){
+    
+}
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+

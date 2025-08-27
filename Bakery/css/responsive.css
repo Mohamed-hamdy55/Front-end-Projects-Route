@@ -1,0 +1,130 @@
+/*Laptop and tablets*/
+@media (max-width:1024px) {
+    /* container for all contents */
+    .container{
+        max-width:990px;
+    }
+
+    /* Header */
+    header .nav-links ul li a {
+        padding: 12px;
+        font-size: 15px;
+    }
+    #hero-section .hero-content h1 {
+      font-size: 40px;
+    }
+    #hero-section .hero-content .description {
+      font-size: 18px;
+    }
+}
+
+/* devices smaller than tablet */
+@media (max-width:790px){
+    /* container for all contents */
+    .container{
+        max-width:750px;
+    }
+
+    /* sections */
+    .section-image,
+    .section-details, .section-map {
+      display: block;
+      float: none;
+      width: 100%;
+    }
+
+    /* cards */
+    #our-bakings-section .bakings-gallery .gallery-card{
+      float: none;
+      text-align: center;
+      width: 100%;
+      padding: 20px;
+    }    
+
+    /* Header Section */
+    header .nav-links{
+      display: none;
+    }
+    header .demo-toggle-menu{
+      display: block;
+    }
+
+    /* Hero Section */
+    #hero-section .hero-content h1 {
+      font-size: 40px;
+    }
+    #hero-section .hero-content .description {
+      font-size: 16px;
+    }
+    #hero-section .hero-content .btns .btn{
+        font-size: 14px;
+        padding: 10px 17px;
+    }
+
+    /* Footer section */
+    #footer-section .footer-top .footer-col{
+      width: 50%;
+      padding-inline: 10px;
+      margin-bottom: 10px;
+    }
+
+    #footer-section .footer-top  .footer-col:nth-child(odd){
+      /* when width become '50%;' if any float item has height more that the others 
+      it will cause unexpected behavior */
+      /* Example:
+          |Item 1| |Item 2| |Item 3| |Item 4|  -> item 1 has height more than other
+          |      |
+
+          after 'width: 50%'
+          |Item 1| |Item 2|                         |Item 1| |Item 2|
+          |      | |Item 3|  ---- instead of -----  |Item 3| |Item 4|
+          |Item 4|
+
+          why? because the extra height in the first item make it imposipple for 'Item 3' to start from most left point
+
+      */
+      clear:both;
+    }
+}
+
+/* Mobile Large*/
+@media (max-width:425px){
+    /* sections */
+    .section-list li .item-image, .section-list li .item-desc{
+        display: block;
+        text-align: center;
+        margin-inline:auto;
+        margin-block: 10px;
+    }
+    
+    /* Footer section */
+    #footer-section .footer-top .footer-col{
+      float: none;
+      width: 100%;
+    }
+}
+/* Mobile Meduim, Small and very small*/
+@media (max-width:375px){    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

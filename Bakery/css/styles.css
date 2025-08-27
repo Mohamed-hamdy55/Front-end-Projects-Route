@@ -1,0 +1,463 @@
+/* Start Imports */
+@import url("https://fonts.googleapis.com/css2?family=Alegreya+Sans:ital,wght@0,100;0,300;0,400;0,500;0,700;0,800;0,900;1,100;1,300;1,400;1,500;1,700;1,800;1,900&family=Alegreya:ital,wght@0,400..900;1,400..900&display=swap");
+
+/* End Imports */
+
+/* Start Variables */
+:root {
+  --section-margin: 100px;
+  --section-gray: #f8f8f8;
+  --section-dark:#353330;
+  --section-light-dark: #403d38;
+  --section-heading-color: black;
+  --section-text-color: #686868;
+  --footer-section-text: #969696;
+  --footer-icon-bg: #484540;
+  --link-hover: #b6915b;
+  --dark-brown: rgba(67, 62, 55, 0.95);
+  --light-brown: #8e7754;
+  --light-gray: #cccccc;
+  --dark-gray: #595959;
+  --btn-dark: var(--light-brown);
+}
+
+/* End Variables */
+
+/* Start Global rules */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* use for test any overflow taht can not be seen */
+  /* outline: 5px solid green;  */
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: "Alegreya Sans", serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.nav-links a{
+  font-family: "Alegreya";
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: initial;
+}
+p {
+  line-height: 2;
+}
+img,
+video {
+  width: 100%;
+  height: auto;
+}
+ul {
+  list-style: none;
+}
+input,
+textarea {
+  outline: none;
+}
+div.section:not(:first-child){
+    padding-top:70px;
+    padding-bottom: 50px;
+    /* Smart way to remove any extra white spaces if the display for childs is 'inline-block' */
+    font-size: 0;
+}
+/* End Global rules */
+
+/* Start Component */
+.container {
+  max-width: 1200px;
+  padding-inline: 15px;
+  margin: auto;
+}
+.float-l{
+  float: left;
+}
+.float-r{
+  float: right;
+}
+.section-image,
+.section-details {
+  display: inline-block;
+  vertical-align: middle;
+}
+.section-image, .section-map{
+    padding-inline: 2%;
+    width: 50%;
+}
+.section-details, .section-details-float{
+    padding: 0 15px 0;
+    width: 48%;
+}
+.section-details-center{
+    text-align: center;
+}
+.section
+.section-heading{
+    color: var(--section-heading-color);
+    margin-bottom: 25px;
+    font-weight: lighter;
+    font-size: 32px;
+}
+.section-desc{
+    margin-bottom: 16px;
+    color: var(--section-text-color);
+    font-size: 16px;
+}
+.section-list li {
+    margin-bottom: 16px;
+    color: var(--section-text-color);
+    font-size: 16px;
+}
+.section-list li .item-image, .section-list li .item-desc{
+    display: inline-block;
+    vertical-align:middle;
+}
+.section-list li .item-image{
+    width: 40px;
+    /* height is not recommended to be edit but: 
+        1- in this case we make sure that the 'aspect ratio" is equal
+        to make a complete circle shape
+        
+        2- aspect-ratio not worked in old browsers 
+    */
+    height: 40px;
+    border: 0.5px solid var(--light-gray);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+.section-list li .item-image.dark-bg{
+    background-color: var(--light-brown);
+}
+.section-list li .item-desc{
+    margin-left: 5px;
+    /* word-wrap: break-word; */
+}
+.section-gray {
+  background-color: var(--section-gray);
+}
+.clr {
+  clear: both;
+}
+.btn{
+    border: 2px solid transparent;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    font-weight: bold;
+    color: white;
+}
+.btn:hover{
+    background-color: white;
+    color: black;
+}
+.dark-btn{
+    background-color: var(--btn-dark);
+}
+.white-btn{
+    border-color: white;
+}
+/* End Compnent */
+
+/* Start Header */
+header{
+  position: fixed;
+  width: 100%;
+  z-index: 20;
+  padding-top: 20px;
+  top: 0;
+}
+header .logo {
+  width: 150px;
+}
+header .nav-links > ul > li {
+  position: relative;
+}
+header .nav-links > ul li a {
+  color: white;
+  padding: 15px;
+  font-size: 18px;
+}
+header .nav-links > ul li a:hover {
+  color: var(--link-hover);
+}
+header .nav-links .link-with-ul > .dropdown-menu{
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    width: 250px;
+    background-color: var(--dark-brown);
+}
+header .nav-links .link-with-ul:hover > .dropdown-menu{
+    display: block;
+    color: var(--link-hover);
+}
+header .nav-links .link-with-ul > .dropdown-menu li a{
+    color: var(--light-gray);
+    width: 100%;
+}
+header .nav-links .link-with-ul > .dropdown-menu li:hover{
+    background-color: var(--link-hover);
+}
+header .nav-links .link-with-ul > .dropdown-menu li:hover a{
+    margin-left: -5px;
+    color: white;
+}
+header .demo-toggle-menu{
+  display: none;
+  font-size: 30px;
+  color: white;
+}
+header.scrolled .demo-toggle-menu{
+  color: black;
+}
+header.scrolled {
+  background-color: white; /* or any color you want */
+  box-shadow: 0px -1px 17px 1px rgba(0, 0, 0, .09);
+}
+header.scrolled .logo img {
+  content: url("../images/bakery-color.png");
+}
+header.scrolled .nav-links > ul > li > a{
+  color: var(--dark-gray);
+}
+header.scrolled .nav-links > ul > li:hover > a{
+  color: black;
+}
+/* End Header */
+
+/* Start Hero Section */
+#hero-section {
+  background-image: url("../images/drew-coffman-1872.jpg");
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  min-height: 800px;
+}
+#hero-section::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+#hero-section .hero-content {
+  position: absolute;
+  width: 52%;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  color: white;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+#hero-section .hero-content .top-heading {
+  font-size: 22px;
+}
+#hero-section .hero-content h1 {
+  font-size: 76px;
+  font-weight: lighter;
+  margin-bottom: 18px;
+  margin-top: 5px;
+}
+#hero-section .hero-content .description {
+  font-size: 24px;
+  margin-bottom: 20px   ;
+}
+#hero-section .hero-content .btns .btn{
+    padding: 15px 28px;
+}
+#hero-section .hero-content .btns .btn:not(:first-child){
+    margin-left: 10px;
+}
+/* End Hero Section */
+
+
+/* Start About Section */
+
+  /* ............. No need to make extra style ................. */
+
+/* End About Section */
+
+/* Start Our Location Section */
+
+  /* ............. No need to make extra style ................. */
+
+/* End Our Location Section */
+
+/* Start Baking Section */
+#our-bakings-section .bakings-gallery .gallery-card{
+    text-align: center;
+    width: 33%;
+    padding-inline: 20px;
+}
+#our-bakings-section .bakings-gallery .gallery-card .card-header{
+    font-size: 22px;
+    font-weight: lighter;
+    color: var(--section-heading-color);
+    margin-block: 20px;
+} 
+#our-bakings-section .bakings-gallery .gallery-card .card-desc{
+    font-size: 16px;
+    color: var(--section-text-color);
+} 
+/* End Baking Section */
+
+/* Start Contact Section */
+
+ /* ............. No need to make extra style ................. */
+
+/* End Contact Section */
+
+/* Start Footer Section */
+#footer-section{
+  color: var(--footer-section-text);
+  background-color: var(--section-light-dark);
+  font-size: 16px;
+  padding-bottom: 0;
+}
+#footer-section .footer-top{
+  padding-bottom: 50px;
+}
+#footer-section .footer-top .footer-col{
+  width: 25%;
+  padding-inline: 15px;
+}
+#footer-section .footer-top  .contactus-part ul{
+  position: relative;
+}
+#footer-section .footer-top .contactus-part ul::before {
+  position: absolute;
+  /* We can make it by using 'content : url()' but need make a headace wen try to clip it from right and left*/
+  content: "";
+  background: url("../images/contact-details-map.png") center center / cover no-repeat ;
+  inset: 0;
+  opacity: 0.2;
+}
+#footer-section .footer-top .about-part .text p:first-child{
+  margin-bottom: 20px;
+}
+#footer-section .footer-top h4.title{
+  font-size: 18px;
+  color: white;
+  margin-bottom: 25px;
+  font-weight: lighter;
+}
+#footer-section .footer-top  ul li:not(:last-child){
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+}
+#footer-section .footer-top  ul li .item-image{
+  width: 20px;
+}
+#footer-section .footer-top  ul li .item-desc{
+  /* give extra 10px for any extra margin, padding related to image */
+  width: calc(100% - 30px);
+}
+#footer-section .footer-bottom{
+  background-color: var(--section-dark);
+  text-align: center;
+  padding-block: 40px;
+}
+#footer-section .footer-bottom .copyright{
+  margin-block: 20px;
+}
+#footer-section .footer-bottom .social-media-icons .icon{
+    width: 40px;
+    /* height is not recommended to be edit but: 
+      1- in this case we make sure that the 'aspect ratio" is equal
+      to make a complete circle shape
+      
+      2- aspect-ratio not worked in old browsers 
+    */
+    height: 40px;
+    margin-right: 10px;
+    background-color: var(--footer-icon-bg);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+/* End Footer Section */
+
+/* Start Side btns secion*/
+.side-btns{
+  position: fixed;
+  text-align: center;
+  padding-block: 5px;
+  width: 40px;
+  right: 0;
+  top: 200px;
+  background: white;
+  z-index: 1000;
+  box-shadow: 0 -1px 17px 1px rgba(0, 0, 0, .09);  
+  border-radius: 5px 0 0 5px;
+  -webkit-border-radius: 5px 0 0 5px;
+  -moz-border-radius: 5px 0 0 5px;
+  -ms-border-radius: 5px 0 0 5px;
+  -o-border-radius: 5px 0 0 5px;
+}
+.side-btns-list .side-btns-item{
+  position: relative;
+}
+.side-btns-list .side-btns-item .item-icon{
+  width: 25px;
+  padding: 5px 2px;
+  opacity: 0.5;
+}
+.side-btns-list .side-btns-item .item-text{
+  position: absolute;
+  display: none;
+  right: 100%;
+  top:0;
+  width: 150px;
+  background-color: transparent;
+}
+.side-btns-list .side-btns-item .item-text a{
+  width: 90%;
+  background-color: white;
+  padding: 8px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.side-btns-list .side-btns-item:hover .item-text{
+  display: block;
+}
+.side-btns-list .side-btns-item:hover .item-icon{
+  scale: 1.2;
+}
+.side-btns-list .side-btns-item:hover a{
+  box-shadow: 0 -1px 17px 1px rgba(0, 0, 0, .09);  
+}
+.side-btns-list .side-btns-item .item-text:hover a{
+  background-color: rgb(75, 75, 240);
+  color: white;
+}
+
+/* End Side btns section*/

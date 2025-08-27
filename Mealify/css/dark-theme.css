@@ -1,0 +1,50 @@
+:root:has(.theme-toggle:checked){
+    --body-background: #202020;
+    --color-default: #ffffff;
+    --color-primary: #c17e1f;
+    --color-secondary: #fff;
+    --color-tertiary: #9f9f9f;
+    --color-light-gray: #252525;
+    --color-light: #171717;
+    --color-dark: white;
+    --btn-bg-hover: #d78c23;
+    --overlay-bg: #171717b3;
+    --selection-color:#c17e1f;
+    --transition-duration: 400ms;
+}
+
+:root:has(.theme-toggle:checked) body{
+  background-color: var(--body-background);
+  color: var(--color-default);
+}
+
+body:has(.theme-toggle:checked) .theme-toggle-gp .light-theme{
+  display: block;
+}
+body:has(.theme-toggle:checked) .theme-toggle-gp .dark-theme{
+  display: none;
+}
+
+body:has(.theme-toggle:checked) header .main-nav .nav-links li:hover {
+  color: var(--color-dark);
+}
+
+body:has(.theme-toggle:checked) .home-section .home-content p {
+  color: var(--color-tertiary);
+}
+
+body:has(.theme-toggle:checked) .chefs-section .section-content .card .card-image::after {
+  background-image: url("../images/team-shape-dark.svg");
+}
+
+body:has(.theme-toggle:checked) .contact-section .section-content .contact-details .contact-item {
+  background-color: rgba(0, 0, 0, 0.562);
+}
+
+body:has(.theme-toggle:checked) .contact-section .section-content .contact-form :is(input, textarea){
+  border-color: black;
+}
+
+body:has(.theme-toggle:checked) .contact-section .section-content .contact-form :is(input, textarea):focus{
+  border-color: var(--color-primary);
+}
