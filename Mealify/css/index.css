@@ -242,16 +242,6 @@ header .mobile-menu-icon {
 header .main-nav ul .close-icon {
   display: none;
 }
-header:has(.main-nav:target) {
-  height: 100%;
-  background-color: var(--overlay-bg);
-}
-header:has(.main-nav:target) ul li.active {
-  color: #000;
-}
-header .main-nav:target {
-  transform: translateX(0);
-}
 
 /* End header */
 
