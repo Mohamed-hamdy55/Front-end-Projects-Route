@@ -84,6 +84,12 @@ section{
     padding-inline: 15px;
     margin-inline: auto;
 }
+.float-l{
+    float: left;
+}
+.float-r{
+    float: right;
+}
 .btn{
     background: var(--interactive-color);
     margin-right: 5px;
@@ -143,11 +149,6 @@ header{
     z-index: 9999;
     width: 100%;
 }
-header .container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 header.scrolled{
     background-color: var(--dark-color);
 }
@@ -157,18 +158,16 @@ header .logo > a{
     font-size: 24px;
     font-weight: 800;
 }
-header nav > ul{
-    display: flex;
-    justify-content: space-between;
-}
 header nav > ul > li{
     padding: 0px 10px;
 }
 header nav > ul > li > a{
+    padding-block: 18px;
     color: var(--main-color);
     font-size: 16px;
     font-weight: 300;
     letter-spacing: 0.5px;
+    padding: 20px 0;
     transition: all var(--transition-duration) ease-in-out 0s;
     -webkit-transition: all var(--transition-duration) ease-in-out 0s;
     -moz-transition: all var(--transition-duration) ease-in-out 0s;
@@ -184,6 +183,7 @@ header nav > ul > li.active > a{
 header nav > .toggle-menu-btn{
     display: none;
     color: white;
+    padding-top: 20px;
     font-size: 25px;
 }
 /* End Header */
@@ -232,11 +232,6 @@ header nav > .toggle-menu-btn{
 /* End Home */
 
 /* Start About Section */
-.about-section .container{
-    display: flex;
-    align-items: flex-start;
-    gap: 50px;
-}
 .about-section .about-image-box{
     width: 30%;
     margin-left: 7%;
@@ -260,10 +255,10 @@ header nav > .toggle-menu-btn{
 }
 .about-section .about-image-box .about-image img{
     border-radius: 5px;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
 }
 .about-section .about-image-box .about-image .social-icons{
     position: absolute;
@@ -274,10 +269,10 @@ header nav > .toggle-menu-btn{
     opacity: 0;
     border-radius: 5px;
     transition: all var(--transition-duration) ease-in-out;
-    -webkit-transition:;
-    -moz-transition:;
-    -ms-transition:;
-    -o-transition:;
+    -webkit-transition: all var(--transition-duration) ease-in-out;
+    -moz-transition: all var(--transition-duration) ease-in-out;
+    -ms-transition: all var(--transition-duration) ease-in-out;
+    -o-transition: all var(--transition-duration) ease-in-out;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     -ms-border-radius: 5px;
@@ -285,7 +280,6 @@ header nav > .toggle-menu-btn{
 }
 .about-section .about-image-box .about-image .social-icons ul{
     position: absolute;
-    display: flex;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -299,10 +293,10 @@ header nav > .toggle-menu-btn{
     font-size: 20px;
     color: white;
     transition: all var(--transition-duration) ease-in-out;
-    -webkit-transition:;
-    -moz-transition:;
-    -ms-transition:;
-    -o-transition:;
+    -webkit-transition: all var(--transition-duration) ease-in-out;
+    -moz-transition: all var(--transition-duration) ease-in-out;
+    -ms-transition: all var(--transition-duration) ease-in-out;
+    -o-transition: all var(--transition-duration) ease-in-out;
 }
 .about-section .about-image-box .about-image .social-icons ul li a:hover{
     color: var(--interactive-color);
@@ -313,6 +307,8 @@ header nav > .toggle-menu-btn{
 }
 .about-section .about-desc{
     width: 60%;
+    padding: 0 15px 0 50px;
+    margin-top: 30px;
 }
 .about-section .about-desc h1{
     position: relative;
@@ -338,15 +334,9 @@ header nav > .toggle-menu-btn{
     margin-bottom: 25px;
     padding-bottom: 25px;
 }
-.about-section .about-desc .personal-details ul{
-    --inline-gap: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--inline-gap);
-    margin-bottom: 25px;
-}
 .about-section .about-desc .personal-details > ul > li{
-    width: calc((100% - var(--inline-gap))/2);
+    width: 45%;
+    margin-bottom: 25px;
     line-height: 1;
 }
 .about-section .about-desc .personal-details > ul > li > span{
@@ -356,10 +346,6 @@ header nav > .toggle-menu-btn{
 /* End About Section */
 
 /* Start Service Section */
-.services-section .section-content{
-    display: flex;
-    flex-wrap: wrap;
-}
 .services-section .section-content .service-card{
     width: 25%;
     text-align: center;
@@ -416,10 +402,6 @@ header nav > .toggle-menu-btn{
 .portfolio-section .section-filter button.active{
     color: var(--interactive-color);
 }
-.portfolio-section .section-content{
-    display: flex;
-    flex-wrap: wrap;
-}
 .portfolio-section .section-content .portfolio-card{
     padding-inline: 15px;
     margin-bottom: 30px;
@@ -456,10 +438,6 @@ header nav > .toggle-menu-btn{
 /* End Portfolio Section */
 
 /* Start Extra Section 'Funfacts' */
-.funfacts-section .section-content{
-    display: flex;
-    flex-wrap: wrap;
-}
 .funfacts-section .section-content .funfacts-card{
     width: 25%;
     text-align: center;
@@ -482,26 +460,31 @@ header nav > .toggle-menu-btn{
 /* Start Testimonial Section */
 .testimonial-section .section-content .testimonial-card{
     overflow: hidden;
+    position: relative;
     padding: 40px;
     width: 70%;
     margin-inline: auto;
     border-radius: 5px;
-    background: linear-gradient(135deg, var(--interactive-color) 0px 120px,var(--secondary-color) 120px) ;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
+    background-color: var(--secondary-color);
 }
-.testimonial-section .section-content .testimonial-card{
-    --inline-gap: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--inline-gap);
+.testimonial-section .section-content .testimonial-card::before{
+    content: "";
+    position: absolute;
+    border-top:  180px solid var(--interactive-color);
+    border-right: 180px solid transparent;
+    height: 72px;
+    left: 0px;
+    top: 0;
+    -webkit-transform: translateX(0%);
+    transform: translateX(0%);
+    width: 77px;
+    z-index: 1;
 }
 .testimonial-section .section-content .testimonial-card .testimonial-card-image{
+    position: relative;
     overflow: hidden;
     width: 110px;
-    height: 110px;
+    z-index: 20;
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -509,7 +492,8 @@ header nav > .toggle-menu-btn{
     -o-border-radius: 50%;
 }
 .testimonial-section .section-content .testimonial-card-content{
-    width: calc((100% - (var(--inline-gap) + 110px)));
+    width: 70%;
+    padding-left: 50px;
 }
 .testimonial-section .section-content .testimonial-card-content h3.name{
     font-size: 26px;
@@ -531,6 +515,12 @@ header nav > .toggle-menu-btn{
 .testimonial-section .section-content  .testimonial-cards-dots{
     text-align: center;
 }
+.testimonial-section .section-content  .testimonial-cards-dots span.active{
+    display: inline-block;
+    border-radius: 10px;
+    padding: 4px 12px;
+    background-color: var(--interactive-color);
+}
 .testimonial-section .section-content  .testimonial-cards-dots span{
     display: inline-block;
     border: 1px solid var(--interactive-color);
@@ -542,19 +532,9 @@ header nav > .toggle-menu-btn{
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
 }
-.testimonial-section .section-content  .testimonial-cards-dots span.active{
-    border-radius: 10px;
-    padding: 4px 12px;
-    background-color: var(--interactive-color);
-}
-
 /* End Testimonial Section*/
 
 /* Start Blog Section */
-.blog-section .section-content{
-    display: flex;
-    flex-wrap: wrap;
-}
 .blog-section .section-content .blog-card{
     width: 33%;
     border-radius: 5px;
@@ -637,14 +617,8 @@ header nav > .toggle-menu-btn{
     outline: 0 none;
     border-color: var(--interactive-color);
 }
-.contact-section .section-content form .user-info {
-    --inline-gap: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--inline-gap);
-}
 .contact-section .section-content form .user-info input{
-    width: calc((100% - var(--inline-gap)) / 2);
+    width: 48%;
 }
 /* End Contact us Section */
 
@@ -660,9 +634,6 @@ header nav > .toggle-menu-btn{
 .footer-section .social-icons{
     display: inline-block;
     margin-bottom: 20px;
-}
-.footer-section .social-icons ul{
-    display: flex;
 }
 .footer-section .social-icons a{
     color: white;

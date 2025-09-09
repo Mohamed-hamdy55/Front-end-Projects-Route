@@ -53,15 +53,15 @@
     }
     header nav > ul{
         display: none;
+        float: none;
     }
     header nav > ul > li{
+        float: none;
         width: 100%;
-        padding-block: 18px;
         text-align: center;
     }
     header nav > .toggle-menu-btn:hover + ul{
-        display: flex;
-        flex-direction: column;
+        display: block;
         position: absolute;
         top: 100%;
         left: 0;
@@ -79,15 +79,14 @@
         font-size: 18px;
     }
     /* about section */
-    .about-section .container{
-        flex-direction: column;
-    }
     .about-section .about-image-box, .about-section .about-desc{
+        float: none;
         padding-inline: 0;
         margin-inline: auto;
         width: 70%;
     }
     .about-section .about-desc .personal-details > ul > li{
+        float: none;
         width: 100%;
         font-size: 16px;
     }
@@ -96,6 +95,7 @@
     }
     /* Service Section */
     .services-section .section-content .service-card{
+        float: none;
         width: 100%;
     }
     /* Portfolio Section */
@@ -114,6 +114,7 @@
     }
     .testimonial-section .section-content .testimonial-card .testimonial-card-image,
     .testimonial-section .section-content .testimonial-card .testimonial-card-content{
+        float: none;
         padding: 0;
     }
     .testimonial-section .section-content .testimonial-card .testimonial-card-image{
@@ -125,6 +126,7 @@
     }
     /* Blog Section */
     .blog-section .section-content .blog-card{
+        float: none;
         width: 70%;
         margin-inline: auto;
         padding-inline: 0;
@@ -133,13 +135,9 @@
     .contact-section .section-content form{
         width: 90%;
     }
-    .contact-section .section-content form .user-info{
-        flex-direction: column;
-        gap: 0;
-    }
     .contact-section .section-content form .user-info input{
+        float: none;
         width: 100%;
-
     }
 }
 /* Mobile Large*/
