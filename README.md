@@ -21,10 +21,10 @@ This is a repo that contains all Front-end Diploma projects
 ## 📂 Folder Structure
 
 ```plaintext
-├── Bakery                # 1^st Project
-├── Fokir                 # 2^nd Porject
-├── Mealify               # 3^rd project
-├── Fokir with flex       # 4^th project
+├── Bakery                # 1^st Project, Demo mobile menu with no content
+├── Fokir                 # 2^nd Porject, Demo mobile menu on hover
+├── Fokir with flex       # 4^th project, Demo mobile menu on hover
+├── Mealify               # 3^rd project, Real mobile menu with advanced CSS
 ├── README.md             # Documentation
 ```
 
@@ -47,7 +47,7 @@ cd <project-directory>
 
 Bakery: [bakery-opal-two.vercel.app](https://bakery-opal-two.vercel.app/)
 Fokir: [fokir-red.vercel.app](https://fokir-red.vercel.app/)
-Fokir-Flex: []()
+Fokir-Flex: [fokir-flex.vercel.app](https://fokir-flex.vercel.app/)
 Mealify: [mealify-xi-self.vercel.app](https://mealify-xi-self.vercel.app/)
 
 ---
