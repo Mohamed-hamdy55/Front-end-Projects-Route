@@ -308,7 +308,7 @@ header .main-nav:target {
   height: var(--icon-size);
   font-size: 1rem;
   border-radius: 50%;
-  border-left: 30px solid var(--color-primary);
+  background: linear-gradient(to right, var(--color-primary) 0% 60%, transparent 60%);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -317,7 +317,6 @@ header .main-nav:target {
 }
 .home-section .home-content .home-btns .watch-btn .icon .inner {
   --inner-icon-circle-size: 2.5rem;
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -334,6 +333,7 @@ header .main-nav:target {
 }
 .home-section .hero-image img {
   filter: drop-shadow(4px 4px 9px #000a);
+  -webkit-filter: drop-shadow(4px 4px 9px #000a);
 }
 .home-section .hero-image img:hover {
     animation: image-shake 1s infinite;
