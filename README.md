@@ -46,11 +46,11 @@ cd <project-directory>
 
 ## 🎥 Live Perview
 
-Bakery: [bakery-opal-two.vercel.app](https://bakery-opal-two.vercel.app/)
-Fokir: [fokir-red.vercel.app](https://fokir-red.vercel.app/)
-Fokir-Flex: [fokir-flex.vercel.app](https://fokir-flex.vercel.app/)
-Mealify: [mealify-xi-self.vercel.app](https://mealify-xi-self.vercel.app/)
-Masonry Layout: []()
+├── Bakery: [bakery-opal-two.vercel.app](https://bakery-opal-two.vercel.app/)
+├── Fokir: [fokir-red.vercel.app](https://fokir-red.vercel.app/)
+├── Fokir-Flex: [fokir-flex.vercel.app](https://fokir-flex.vercel.app/)
+├── Mealify: [mealify-xi-self.vercel.app](https://mealify-xi-self.vercel.app/)
+├── Masonry Layout: [masonry-three.vercel.app/](https://masonry-three.vercel.app/)
 
 ---
 
