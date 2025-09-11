@@ -1,0 +1,110 @@
+/*Laptop Large and 4k*/
+@media (max-width: 1200px) {
+  /* container for all contents */
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  /* container for all contents */
+  .container {
+    max-width: 720px;
+  }
+
+  /* Gallery Section  with Flex*/
+  .gallery-section-flex .section-content{
+    height: 1400px;
+  }
+  .gallery-section-flex .section-content .card{
+    --width-without-gap: calc(100% - var(--gap));
+    width: calc(var(--width-without-gap) / 2);
+  }
+  .gallery-section-flex .section-content .burger-card{
+    order: 2;
+  }
+  .gallery-section-flex .section-content .levitation-pizza-card{
+    order: 3;
+  }
+  .gallery-section-flex .section-content .frittata-card{
+    order: 4;
+  }
+  .gallery-section-flex .section-content .beef-burger-card{
+    order: 5;
+  }
+
+  /* Satrt Gallery Section with Grid*/
+  .gallery-section-grid .section-content{
+    grid-template-columns: repeat(2, auto);
+  }
+  .gallery-section-grid .section-content .hawaiian-pizza-card{
+    grid-row: 1/3;
+  }
+  .gallery-section-grid .section-content .beef-burger-card{
+    grid-row: 1/6;
+  }
+  .gallery-section-grid .section-content .burger-card{
+    grid-row: 3/5;
+  }
+  .gallery-section-grid .section-content .levitation-pizza-card{
+    grid-row: 5/10;
+  }
+  .gallery-section-grid .section-content .frittata-card{
+    grid-row: 10/13;
+  }
+  .gallery-section-grid .section-content .crispy-card{
+    grid-row: 6/9;
+  }
+  .gallery-section-grid .section-content .kebab-card{
+    grid-row: 9/11;
+  }
+  /* Satrt Gallery Section with Columns*/
+  .gallery-section-columns .section-content{
+    columns: 2;
+  }
+}
+
+/* Mobile Lg and Smaller Tablets */
+@media (max-width: 768px) {
+  /* container for all contents */
+  .container {
+    max-width: 540px;
+    padding-inline: 15px;
+  }
+
+  /* Gallery Section with Flex */
+  .gallery-section-flex .section-content{
+    height: auto;
+  }
+  .gallery-section-flex .section-content .card{
+    width: 100%;
+  }
+
+  /* Satrt Gallery Section with Grid*/
+  .gallery-section-grid .section-content{
+    grid-template-columns: repeat(1, auto);
+  }
+  .gallery-section-grid .section-content .card{
+    grid-column: 1;
+    grid-row: span 2;
+  }
+
+  /* Satrt Gallery Section with Columns*/
+  .gallery-section-columns .section-content{
+    columns: 1;
+  }
+}
+
+/* Mobile Large*/
+@media (max-width: 470px) {
+  .container {
+    width: 100%;
+  }
+}
+/* Mobile Meduim, Small and very small*/
+@media (max-width: 375px) {
+    :root {
+        font-size: 12px;
+    }
+}

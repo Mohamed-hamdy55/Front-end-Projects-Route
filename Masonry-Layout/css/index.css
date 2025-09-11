@@ -1,0 +1,310 @@
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+/* Start Variables and root settings */
+:root {
+  --color-default: #212529;
+  --color-primary: #ce1212;
+  --color-secondary: #37373f;
+  --color-tertiary: #7f7f90;
+  --color-light: #ffffff;
+  --color-light-gray: #eee;
+  --color-dark: #000;
+  --btn-bg-hover: #e61414;
+  --overlay-bg: #ffffffb3;
+  --selection-color: #ce1212b3;
+  --font-default: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-primary: "Amatic SC", sans-serif;
+  --font-secondary: "Inter", sans-serif;
+  --transition-duration: 400ms;
+}
+/* End Variables */
+
+/* Start Global rules */
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /* use for test any overflow taht can not be seen */
+  /* outline: 5px solid green;  */
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--font-default);
+  color: var(--color-default);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-secondary);
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+}
+p {
+  line-height: 1.5;
+}
+img,
+video,
+iframe {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+ul {
+  list-style: none;
+}
+input,
+textarea {
+  outline: none;
+}
+button {
+  border: 0;
+  outline: none;
+  background-color: transparent;
+}
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #212529;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+::selection {
+  background-color: var(--selection-color);
+  opacity: 0.2;
+  color: var(--color-light);
+}
+/* End Global rules */
+
+/* Start components */
+.container {
+  max-width: 1140px;
+  margin-inline: auto;
+  padding: 2.5rem 0.3rem;
+}
+.bg-gray {
+  background-color: var(--color-light-gray);
+}
+.section-title{
+    text-align: center;
+    margin-bottom: 1.56rem;
+}
+.section-title h1{
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--color-tertiary);
+    text-transform: uppercase;
+}
+.section-title p{
+    font-size: 3.125rem;
+    font-family: var(--font-primary);
+    text-transform: capitalize;
+}
+.section-title span {
+    color: var(--color-primary);
+}
+.order-1{
+    order: 1;
+}
+.order-2{
+    order: 2;
+}
+.order-3{
+    order: 3;
+}
+.order-4{
+    order: 4;
+}
+.order-5{
+    order: 5;
+}
+.order-6{
+    order: 6;
+}
+.order-7{
+    order: 7;
+}
+/* End components */
+
+
+/* Satrt Gallery Section with Flex*/
+/* Note we can't use columns here because we need to change 'order' for some cards in tablet view */
+.gallery-section-flex .section-content{
+    --gap: 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: var(--gap);
+    height: 1000px;
+}
+.gallery-section-flex .section-content .card{
+    --width-without-gap: calc(100% - var(--gap)*2);
+    text-align: center;
+    width: calc(var(--width-without-gap) / 3);
+    overflow: hidden;
+    position: relative;
+}
+.gallery-section-flex .section-content .card .card-content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(0,0%,9%,0.7);
+    color: white;
+    width: 100%;
+    height: 100%;
+    top: 100%;
+    padding: 0.9375rem;
+    transition: top var(--transition-duration) ease-in-out;
+    -webkit-transition: top var(--transition-duration) ease-in-out;
+    -moz-transition: top var(--transition-duration) ease-in-out;
+    -ms-transition: top var(--transition-duration) ease-in-out;
+    -o-transition: top var(--transition-duration) ease-in-out;
+}
+.gallery-section-flex .section-content .card:hover .card-content{
+    top: 0;
+}
+.gallery-section-flex .section-content .card .card-image{
+    transition: scale var(--transition-duration) ease-in-out;
+    -webkit-transition: scale var(--transition-duration) ease-in-out;
+    -moz-transition: scale var(--transition-duration) ease-in-out;
+    -ms-transition: scale var(--transition-duration) ease-in-out;
+    -o-transition: scale var(--transition-duration) ease-in-out;
+}
+.gallery-section-flex .section-content .card:hover .card-image{
+    scale: 1.1;
+}
+/* End Gallery Section with Flex*/
+
+
+/* Satrt Gallery Section with Grid*/
+/* Note we can't use columns here because we need to change 'order' for some cards in tablet view */
+.gallery-section-grid .section-content{
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(12, auto);
+  gap: 20px;
+}
+.gallery-section-grid .section-content .card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fill space, crop if needed */
+}
+.gallery-section-grid .section-content .card{
+  position: relative;
+  overflow: hidden;
+}
+.gallery-section-grid .section-content .card .img{
+  transition: scale 0.5s ease-in-out;
+  -webkit-transition:;
+  -moz-transition:;
+  -ms-transition:;
+  -o-transition:;
+}
+.gallery-section-grid .section-content .card .card-content{
+  position: absolute;
+  padding: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  align-content: center;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  transition: top 0.5s ease-in-out;
+  -webkit-transition: top 0.5s ease-in-out;
+  -moz-transition: top 0.5s ease-in-out;
+  -ms-transition: top 0.5s ease-in-out;
+  -o-transition: top 0.5s ease-in-out;
+}
+.gallery-section-grid .section-content .card:hover .card-content{
+  top: 0;
+}
+.gallery-section-grid .section-content .card:hover .card-image{
+  scale: 1.12;
+}
+.gallery-section-grid .section-content .hawaiian-pizza-card{
+  grid-row: 1/4;
+}
+.gallery-section-grid .section-content .beef-burger-card{
+  grid-row: 1/9;
+}
+.gallery-section-grid .section-content .burger-card{
+  grid-row: 1/4;
+}
+.gallery-section-grid .section-content .levitation-pizza-card{
+  grid-row: 4/11;
+}
+.gallery-section-grid .section-content .frittata-card{
+  grid-row: 9/13;
+}
+.gallery-section-grid .section-content .crispy-card{
+  grid-row: 4/7;
+}
+.gallery-section-grid .section-content .kebab-card{
+  grid-row: 7/11;
+}
+/* End Gallery Section with Grid*/
+
+
+/* Satrt Gallery Section with Columns*/
+.gallery-section-columns .section-content{
+  columns: 3;
+  column-gap: 20px;
+}
+.gallery-section-columns .section-content .card{
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.gallery-section-columns .section-content .card .img{
+  transition: scale 0.5s ease-in-out;
+  -webkit-transition:;
+  -moz-transition:;
+  -ms-transition:;
+  -o-transition:;
+}
+.gallery-section-columns .section-content .card .card-content{
+  position: absolute;
+  padding: 20px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
+  align-content: center;
+  top: 100%;
+  width: 100%;
+  height: 100%;
+  align-content: center;
+  transition: top 0.5s ease-in-out;
+  -webkit-transition:;
+  -moz-transition:;
+  -ms-transition:;
+  -o-transition:;
+}
+.gallery-section-columns .section-content .card:hover .card-content{
+  top: 0;
+}
+.gallery-section-columns .section-content .card:hover .card-image{
+  scale: 1.12;
+}
+/* End Gallery Section with Columns*/
