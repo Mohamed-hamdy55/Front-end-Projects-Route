@@ -1,0 +1,125 @@
+/* Mobile Meduim, Small and very small = xsmall*/
+@media screen and (max-width:375px){    
+}
+
+/* Mobile Large = small */
+@media screen and (min-width: 576px){
+
+}
+
+/* devices smaller than tablet = meduim */
+@media screen and  (min-width:768px){
+  .row-box{
+    padding: 3rem;
+  }
+  .section-title-box h1{
+    font-size: 3rem;
+  }
+  
+  /* Home section */
+  .home-section .content .home-title{
+    font-size: 4.5rem;
+  }
+  .home-section .content .home-typewriter{
+    font-size: 2.5rem;
+  }
+}
+
+/* Tablets and smaller laptob = large*/
+@media screen and  (min-width:992px){
+  ul .dropdown > ul.dropdown-inner{
+    position: absolute;
+    z-index: 10;
+    text-transform: capitalize;
+    opacity: 0;
+    padding: 0;
+    background-color: var(--color-light);
+    top: calc(100% + 30px);
+    width: 100%;
+    color: var(--color-dark);
+    box-shadow: 0px 0px 1.85rem rgba(127, 137, 161, 0.25);
+    transition: opacity var(--transition-default) ease-in-out , top var(--transition-default) ease-in-out;
+    -webkit-transition: opacity var(--transition-default) ease-in-out , top var(--transition-default) ease-in-out;
+    -moz-transition: opacity var(--transition-default) ease-in-out , top var(--transition-default) ease-in-out;
+    -ms-transition: opacity var(--transition-default) ease-in-out , top var(--transition-default) ease-in-out;
+    -o-transition: opacity var(--transition-default) ease-in-out , top var(--transition-default) ease-in-out;
+  }
+  ul .dropdown:hover > ul.dropdown-inner{
+      opacity: 1;
+      top: 80%;
+  }
+  ul .dropdown > ul.dropdown-deep-inner{
+      position: absolute;
+      text-transform: capitalize;
+      opacity: 0;
+      padding: 0;
+      background-color: var(--color-light);
+      left: -90%;
+      top: 0;
+      width: 100%;
+      color: var(--color-dark);
+      box-shadow: 0px 0px 1.85rem rgba(127, 137, 161, 0.25);
+      transition: opacity var(--transition-default) ease-in-out , left var(--transition-default) ease-in-out;
+      -webkit-transition: opacity var(--transition-default) ease-in-out , left var(--transition-default) ease-in-out;
+      -moz-transition: opacity var(--transition-default) ease-in-out , left var(--transition-default) ease-in-out;
+      -ms-transition: opacity var(--transition-default) ease-in-out , left var(--transition-default) ease-in-out;
+      -o-transition: opacity var(--transition-default) ease-in-out , left var(--transition-default) ease-in-out;
+  }
+  ul .dropdown:hover > ul.dropdown-deep-inner{
+      opacity: 1;
+      left: -100%;
+  }
+  header nav .nav-links > ul > li{
+    white-space: nowrap;
+    padding: 0.65rem 0 0.65rem 1.85rem;
+  }
+  header nav .nav-links > ul > li > a{
+      position: relative;
+  }
+  header nav .nav-links > ul > li > a::after{
+      content: "";
+      position: absolute;
+      background-color: var(--color-light);
+      height: 2px;
+      width: 0%;
+      bottom: -5px;
+      left: 0;
+      transition: width var(--transition-default);
+      -webkit-transition: width var(--transition-default);
+      -moz-transition: width var(--transition-default);
+      -ms-transition: width var(--transition-default);
+      -o-transition: width var(--transition-default);
+  }
+  header nav .nav-links > ul > li > a:hover::after, header nav > .nav-links > ul > li > a.active::after{
+      width: 90%;
+  }
+  header nav .nav-links > ul .dropdown > ul a:hover{
+      color: var(--color-sec);
+  }
+}
+
+/*Laptop and large tablets = xl*/
+@media screen and  (min-width:1200px) {
+
+}
+
+/*Laptop and tablets = xxl*/
+@media screen and (min-width:1400px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

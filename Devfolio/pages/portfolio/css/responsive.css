@@ -1,0 +1,45 @@
+/* Mobile Meduim, Small and very small = xsmall*/
+@media screen and (max-width:375px){    
+}
+
+/* Mobile Large = small */
+@media screen and (min-width: 576px){
+
+}
+
+/* devices smaller than tablet = meduim */
+@media screen and  (min-width:768px){
+}
+
+/* Tablets and smaller laptob = large*/
+@media screen and  (min-width:992px){
+  .hero-title{
+    font-size: 3.7rem;
+  }
+}
+
+/*Laptop and large tablets = xl*/
+@media screen and  (min-width:1200px) {
+
+}
+
+/*Laptop and tablets = xxl*/
+@media screen and (min-width:1400px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
