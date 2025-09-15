@@ -57,7 +57,7 @@ Mealify: https://mealify-xi-self.vercel.app/
 
 Masonry Layout: https://masonry-three.vercel.app/
 
-DevFolio: 
+DevFolio: https://devfolio-azure.vercel.app/
 
 ---
 
