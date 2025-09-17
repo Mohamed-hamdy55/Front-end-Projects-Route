@@ -463,6 +463,16 @@ header nav > .nav-links.mobile-navbar  li  a.active{
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+        transition: box-shadow var(--transition-default) ease-in-out, opacity var(--transition-default) ease-in-out;
+    -webkit-transition: box-shadow var(--transition-default) ease-in-out, opacity var(--transition-default) ease-in-out;
+    -moz-transition: box-shadow var(--transition-default) ease-in-out, opacity var(--transition-default) ease-in-out;
+    -ms-transition: box-shadow var(--transition-default) ease-in-out, opacity var(--transition-default) ease-in-out;
+    -o-transition: box-shadow var(--transition-default) ease-in-out, opacity var(--transition-default) ease-in-out;
+
+}
+.contact-section form .submit-btn:hover{
+    box-shadow: 0 0 0 5px var(--box-shadow-light);
+    opacity: 0.9;
 }
 /* End Contact */
 

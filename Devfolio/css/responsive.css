@@ -1,3 +1,10 @@
+/* Detect iOS Safari */
+@supports (-webkit-touch-callout: none) {
+  .home-section, .counter-section, .testimonial-section, .contact-section {
+    background-attachment: scroll; /* fallback */
+  }
+}
+
 /* Mobile Meduim, Small and very small = xsmall*/
 @media screen and (max-width:375px){    
 }
