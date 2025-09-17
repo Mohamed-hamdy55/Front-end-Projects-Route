@@ -11,7 +11,8 @@
     --icons-color:#1e1e1e;
     --box-shadow-light: #cde1f8;
     --box-shadow-dark: rgba(0, 0, 0, 0.1);
-    --dark-overlay: rgba(0, 0, 0, 0.8);
+    --dark-overlay: rgba(0, 0, 0, 0.5);
+    --header-overlay: rgba(0, 0, 0, 0.9);
     --mobile-nav-bg-color: rgba(78, 78, 78, 0.9);
     --transition-very-fast: 500ms;
     --transition-fast: 0.3s;
@@ -163,7 +164,7 @@ header{
     -o-transition: padding var(--transition-fast) ease-in-out , background-color var(--transition-fast) ease-in-out;
 }
 header.scrolled{
-    background-color: var(--dark-overlay);
+    background-color: var(--header-overlay);
     padding-block: 0.7rem;
 }
 
