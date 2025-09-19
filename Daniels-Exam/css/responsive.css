@@ -1,0 +1,90 @@
+/* Mobile Meduim, Small and very small = xsmall*/
+@media screen and (max-width:375px){    
+}
+
+/* Mobile Large = small */
+@media screen and (min-width: 576px){
+
+}
+
+/* devices smaller than tablet = meduim */
+@media screen and  (min-width:768px){
+
+  /* Start Component */
+  .section-title-box h1{
+    font-size: 2.5rem;
+  }
+  /* Start Header  */
+  header{
+    color: var(--color-light);
+  }
+  header nav > .mobile-navbar-toggle{
+   display: none;
+  }
+  header nav > .nav-links{
+    position: static;
+    display: block;
+    padding-block: 0rem;
+    background-color: rgba(255, 255, 255, 0);
+    width: auto;
+  }
+   header nav .nav-links > ul{
+    display: flex;
+   }
+  header nav .nav-links > ul > li{
+    padding: 0 0 0 1rem;
+    font-size: 0.8rem;
+  }
+  header nav .nav-links > ul > li{
+    font-size: 0.9rem;
+  }
+
+  /* Start Home Section */
+  .home-section .content .home-typewriter{
+    font-size: 4rem;
+    font-weight: 100;
+  }
+  .home-section .content .home-typewriter .typed{
+    font-weight: 400;
+  }
+}
+
+/* Tablets and smaller laptob = large*/
+@media screen and  (min-width:992px){
+
+  /* Start Header */
+  header nav .nav-links > ul > li{
+    padding: 0 0 0 2rem;
+  }
+
+  /* Start About */
+  .about-section .about-image{
+    margin-bottom: 0px;
+  }
+}
+
+/*Laptop and large tablets = xl*/
+@media screen and  (min-width:1200px) {
+
+}
+
+/*Laptop and tablets = xxl*/
+@media screen and (min-width:1400px) {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
