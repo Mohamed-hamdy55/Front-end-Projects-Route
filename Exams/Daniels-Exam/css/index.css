@@ -213,14 +213,14 @@ header nav > .mobile-navbar-toggle{
 }
 header nav > .nav-links{
   position: absolute;
-  display: none;
   width: 100%;
-  top: 80%;
+  opacity: 0;
+  top: 90%;
   left: 0;
   text-align: center;
   background-color: var(--color-light);
   padding-block: 2rem;
-  z-index: 1020;
+  z-index: 1000;
   transition: top var(--transition-default) ease-in-out, opacity var(--transition-default) ease-in-out;
   -webkit-transition: top var(--transition-default) ease-in-out, opacity var(--transition-default) ease-in-out;
   -moz-transition: top var(--transition-default) ease-in-out, opacity var(--transition-default) ease-in-out;
@@ -229,7 +229,7 @@ header nav > .nav-links{
 }
 header nav > .nav-links.mobile-navbar{
   top: 99%;
-  display: block;
+  opacity: 1;
   color: var(--color-meduim-dark);
 }
 header nav > .nav-links li{
