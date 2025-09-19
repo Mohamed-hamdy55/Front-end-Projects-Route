@@ -214,22 +214,17 @@ header nav > .mobile-navbar-toggle{
 header nav > .nav-links{
   position: absolute;
   width: 100%;
-  opacity: 0;
+  display: none;
   top: 90%;
   left: 0;
   text-align: center;
   background-color: var(--color-light);
   padding-block: 2rem;
   z-index: 1000;
-  transition: top var(--transition-default) ease-in-out, opacity var(--transition-default) ease-in-out;
-  -webkit-transition: top var(--transition-default) ease-in-out, opacity var(--transition-default) ease-in-out;
-  -moz-transition: top var(--transition-default) ease-in-out, opacity var(--transition-default) ease-in-out;
-  -ms-transition: top var(--transition-default) ease-in-out, opacity var(--transition-default) ease-in-out;
-  -o-transition: top var(--transition-default) ease-in-out, opacity var(--transition-default) ease-in-out;
 }
 header nav > .nav-links.mobile-navbar{
   top: 99%;
-  opacity: 1;
+  display: block;
   color: var(--color-meduim-dark);
 }
 header nav > .nav-links li{
