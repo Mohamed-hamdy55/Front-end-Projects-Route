@@ -27,6 +27,9 @@ This is a repo that contains all Front-end Diploma projects
 ├── Mealify               # 4^th project, Real mobile menu with advanced CSS
 ├── Masonry               # 5^th project, Practicing with responsive design
 ├── DevFolio              # 6^th project, Practicing with responsive design with Bootstrap
+├── Exams                 # Folder that will contains all exams
+    ├── Daniels             # Fist Exam
+
 ├── README.md             # Documentation
 ```
 
@@ -58,6 +61,8 @@ Mealify: https://mealify-xi-self.vercel.app/
 Masonry Layout: https://masonry-three.vercel.app/
 
 DevFolio: https://devfolio-azure.vercel.app/
+
+Daniels Exam: https://daniels-exam.vercel.app/
 
 ---
 
