@@ -48,6 +48,11 @@
   .home-section .content .home-typewriter .typed{
     font-weight: 400;
   }
+
+  /* Start Contact */
+  .contact-section{
+    padding-inline: 8rem;
+  }
 }
 
 /* Tablets and smaller laptob = large*/

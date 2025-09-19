@@ -35,18 +35,15 @@ const initApp = () => {
   // Handle display and hidden for header on scroll
   let lastScroll = 0;
   const header = document.querySelector("header");
-  const backToTopBtn = document.getElementById("back-to-top");
-  const homeSection = document.getElementById("about");
+  const aboutSection = document.getElementById("about");
   
   window.addEventListener("scroll", function () {
     const currentScroll = window.pageYOffset;
-    if (currentScroll < homeSection.offsetTop) {
+    if (currentScroll < aboutSection.offsetTop) {
       // remove scrolled when reach the top of body
       header.classList.remove("scrolled");
-      backToTopBtn.classList.remove("active");
     } else {
       header.classList.add("scrolled");
-      backToTopBtn.classList.add("active");
 
     }
     lastScroll = currentScroll;
