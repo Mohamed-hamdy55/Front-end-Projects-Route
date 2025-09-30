@@ -68,6 +68,10 @@ DevFolio: https://devfolio-azure.vercel.app/
 
 Daniels Exam: https://daniels-exam.vercel.app/
 
+JS Calculator: https://js-calculator-eosin-beta.vercel.app/
+
+Js Task-1: https://js-task-1-ashy.vercel.app/
+
 ---
 
 
