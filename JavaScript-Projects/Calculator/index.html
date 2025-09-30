@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Calculator Task</title>
+  </head>
+  <body>    
+      <!-- Simple calculator with a real calculator view -->
+      <div class="calculator-box">
+        <div class="calculator">
+          <div class="calc-screen" id="screen">0</div>
+          <form class="calc-body" id="calculator-form">
+            <!-- Build the body that contains numbers, operators -->
+            <button class="btn operator" data-value="C">C</button>
+            <button class="btn operator" data-value="%">%</button>
+            <button class="btn operator" data-value="+/-">+/-</button>
+            <button class="btn operator" data-value="/">&#247;</button>
+            <button class="btn number" data-value="7">7</button>
+            <button class="btn number" data-value="8">8</button>
+            <button class="btn number" data-value="9">9</button>
+            <button class="btn operator" data-value="*">&#215;</button>
+            <button class="btn number" data-value="4">4</button>
+            <button class="btn number" data-value="5">5</button>
+            <button class="btn number" data-value="6">6</button>
+            <button class="btn operator" data-value="-">-</button>
+            <button class="btn number" data-value="1">1</button>
+            <button class="btn number" data-value="2">2</button>
+            <button class="btn number" data-value="3">3</button>
+            <button class="btn operator" data-value="+">+</button>
+            <button class="btn number" data-value="0">0</button>
+            <button class="btn number" data-value=".">.</button>
+            <button class="btn operator" data-value="del">del</button>
+            <button class="btn operator equal" type="submit" id="submit-btn"  data-value="=">=</button>
+          </form>
+       </div>
+      </div>
+    
+    <script src="./js/main.js"></script>
+  </body>
+</html>

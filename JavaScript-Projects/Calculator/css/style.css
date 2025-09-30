@@ -1,0 +1,79 @@
+*,
+*::after,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  /* outline: 5px solid green; */
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block; /* Very Important*/
+}
+.clr {
+  clear: both;
+}
+.container {
+  width: 1200px;
+  margin-inline: auto;
+}
+/* Styling for calculator like a real one*/
+.calculator-box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.calculator{
+  width: 300px;
+  background-color: #e0e0e0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.calc-screen{
+  width: 100%;
+  height: 60px;
+  background-color: black;
+  color: white;
+  font-size: 2em;
+  text-align: right;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px #000000;
+  margin-bottom: 10px;
+}
+.calc-body{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.calc-body .btn{
+  padding: 20px;
+  font-size: 1.2em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  box-shadow: 0 2px #ccc;
+  transition: all 0.2s ease;
+}
+.calc-body .btn:active{
+  box-shadow: 0 1px #999;
+  transform: translateY(1px);
+}
+.calc-body .btn.operator{
+  background-color: orange;
+  color: white;
+}
+.calc-body .btn.operator:active{
+  box-shadow: 0 1px #cc8400;
+  transform: translateY(1px);
+}
+.calc-body .btn.equal{
+  background-color: green;
+  color: white;
+}
+

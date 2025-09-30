@@ -28,7 +28,11 @@ This is a repo that contains all Front-end Diploma projects
 ├── Masonry               # 5^th project, Practicing with responsive design
 ├── DevFolio              # 6^th project, Practicing with responsive design with Bootstrap
 ├── Exams                 # Folder that will contains all exams
-    ├── Daniels             # Fist Exam
+|   ├── Daniels             # Fist Exam
+|
+├── Javascript-Projects   # Folder that will contains all JS projects
+|    ├── Calculator             # Calculator task
+|    ├── Task-1                 # JS task-1
 
 ├── README.md             # Documentation
 ```

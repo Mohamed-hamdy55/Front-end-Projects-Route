@@ -1,0 +1,95 @@
+*,
+*::after,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  /* outline: 5px solid green; */
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block; /* Very Important*/
+}
+.clr {
+  clear: both;
+}
+.container {
+  width: 1200px;
+  margin-inline: auto;
+}
+hr {
+  margin: 20px 0;
+}
+ol{
+  padding: 50px;
+}
+ol li{
+  margin-bottom: 40px;
+}
+.flex-box-row{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.list-example{
+  border: 2px solid black;
+  padding: 20px;
+  margin-top: 20px;
+  width: fit-content;
+  background-color: #f0f0f0;
+}
+.example-header{
+  color: red;
+  margin-bottom: 10px;
+}
+.example-output{
+  color: green;
+}
+.real-test{
+  border: 2px solid black;
+  padding: 20px;
+  margin-top: 20px;
+  width: fit-content;
+  background-color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.real-test h3{
+  color: blue;
+  margin-bottom: 10px;
+}
+.real-test input{
+  padding: 5px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.real-test button{
+  padding: 5px 10px;
+  border: none;
+  background-color: red;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.real-test button:hover{
+  background-color: darkred;
+}
+.real-test .test-output{
+  margin-top: 8px; /* or any value you prefer */
+  margin-bottom: 0;
+  display: block;
+  font-size: 1.1em;
+  color: green;
+}
+
