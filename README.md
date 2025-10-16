@@ -34,6 +34,7 @@ This is a repo that contains all Front-end Diploma projects
 |    ├── Calculator             # Calculator task
 |    ├── Task-1                 # JS task-1
 |    ├── Task-2                 # JS task-2
+|    ├── Task-3                 # JS task-3
 |
 ├── README.md             # Documentation
 ```
@@ -74,6 +75,8 @@ JS Calculator: https://js-calculator-eosin-beta.vercel.app/
 Js Task-1: https://js-task-1-ashy.vercel.app/
 
 Js Task-2: https://task-2-gamma-silk.vercel.app/
+
+Js Task-3:
 
 ---
 
