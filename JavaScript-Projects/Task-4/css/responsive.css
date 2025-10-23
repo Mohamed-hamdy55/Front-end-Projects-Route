@@ -1,0 +1,37 @@
+/*Laptop Large and 4k*/
+@media (max-width: 1200px) {
+  /* container for all contents */
+  .container {
+    max-width: 960px;
+  }
+}
+
+/* Tablets */
+@media (max-width: 992px) {
+  /* container for all contents */
+  .container {
+    max-width: 720px;
+  }
+}
+
+/* Mobile Lg and Smaller Tablets */
+@media (max-width: 768px) {
+  /* container for all contents */
+  .container {
+    max-width: 540px;
+    padding-inline: 15px;
+  }
+}
+
+/* Mobile Large*/
+@media (max-width: 470px) {
+  .container {
+    width: 100%;
+  }
+}
+/* Mobile Meduim, Small and very small*/
+@media (max-width: 375px) {
+    :root {
+        font-size: 12px;
+    }
+}

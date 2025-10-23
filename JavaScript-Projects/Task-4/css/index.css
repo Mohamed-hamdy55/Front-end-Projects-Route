@@ -1,0 +1,100 @@
+/* Import font */
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&family=Saira+Condensed:wght@300;400;500;600;700;800&display=swap");
+
+
+/* Start Variables and root settings */
+:root {
+    --color-default: black;
+    --color-secondary: #17a2b8;
+    --color-light: #fff;
+    --transition-normal: 0.5s;
+}
+/* End Variables */
+
+/* Start Global rules */
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body{
+    color: var(--color-default);
+    background: #24353f;
+    font-family: 'Titillium Web', sans-serif;
+    min-height: 100vh;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Pacifico", cursive;
+    color: var(--color-light);
+    margin-bottom: 2rem;
+}
+p{
+    margin: 0;
+    color: var(--color-light);
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-secondary);
+}
+/* End Global rules */
+
+/* Start Styling  */
+main{
+    padding-block: 3rem;
+}
+.login-form{
+    box-shadow: 0 0 5px 5px #111518;
+    padding: 3rem;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+input.form-control{
+    background-color: rgba(0,0,0,0);
+    color: var(--color-light) ;
+    transition: border-color var(--transition-normal) ease-in-out;
+    -webkit-transition: border-color var(--transition-normal) ease-in-out;
+    -moz-transition: border-color var(--transition-normal) ease-in-out;
+    -ms-transition: border-color var(--transition-normal) ease-in-out;
+    -o-transition: border-color var(--transition-normal) ease-in-out;
+}
+input.form-control::placeholder{
+    color: rgb(182, 182, 182);
+}
+input.form-control:focus{
+    color: var(--color-light);
+    background-color: rgba(0,0,0,0);
+    border-color: #80bdff;
+    outline: 0;
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+}
+.btn-submit {
+  --bs-btn-color: var(--color-light);
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: var(--color-secondary);
+  --bs-btn-hover-color: var(--color-light);
+  --bs-btn-hover-bg: var(--color-secondary);
+  --bs-btn-hover-border-color: var(--color-secondary);
+  transition: background-color var(--transition-normal) ease-in-out;
+  -webkit-transition: background-color var(--transition-normal) ease-in-out;
+  -moz-transition: background-color var(--transition-normal) ease-in-out;
+  -ms-transition: background-color var(--transition-normal) ease-in-out;
+  -o-transition: background-color var(--transition-normal) ease-in-out;
+}
+.error-message{
+  color: red;
+  margin-top: 0.2rem;
+  min-height: 1.5rem;
+  font-size: 0.8rem;
+}
+
+/* End Styling  */
+
