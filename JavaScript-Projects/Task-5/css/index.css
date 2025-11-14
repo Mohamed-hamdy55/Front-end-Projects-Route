@@ -1,0 +1,212 @@
+/* Import font */
+
+
+/* Start Variables and root settings */
+:root {
+    --color-default: #bfc1c8;
+    --color-secondary: #009ad8;
+    --color-light: #fff;
+    --color-dark: #262936;
+    --bg-dark: #1e202b;
+    --bg-semi-dark: #323544;
+    --transition-normal: 0.5s;
+}
+/* End Variables */
+
+/* Start Global rules */
+*,
+*::after,
+*::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body{
+    color: var(--color-default);
+    background: var(--color-dark);
+    font-family: "Roboto", "Open Sans", sans-serif;
+    min-height: 100vh;
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: "Pacifico", cursive;
+    color: var(--color-light);
+    margin-bottom: 2rem;
+}
+p{
+    margin: 0;
+    color: var(--color-light);
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-secondary);
+}
+input{
+    outline: 0;
+    border: 0;
+}
+button, form input {
+    border: none;
+    background: var(--color-secondary);
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: var(--color-light);
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    font-size: 14px;
+}
+/* End Global rules */
+
+/* Start Styling  */
+
+/* Start Navbar */
+.navbar-expand-lg .navbar-nav .nav-link{
+    color: var(--color-light);
+    padding: 5px 25px;
+    font-size: 14px;
+    margin-right: 10px;
+    border: 2px solid transparent;
+    transition:  color var(--transition-normal) ease-in;
+    -webkit-transition:  color var(--transition-normal) ease-in;
+    -moz-transition:  color var(--transition-normal) ease-in;
+    -ms-transition:  color var(--transition-normal) ease-in;
+    -o-transition:  color var(--transition-normal) ease-in;
+}
+.navbar-nav .nav-link.active, .navbar-nav .nav-link.showm, .navbar-nav .nav-link:hover  {
+    color: var(--color-secondary);
+    border-color: var(--color-secondary);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+/* End Navbar */
+
+
+/* Start Main */
+main{
+    background: url("../images/hero.png") no-repeat top center/contain;
+    width: 100%;
+    min-height: 100vh;
+    padding-block: 1px;
+}
+main .search-form {
+    position: relative;
+    margin-block: 30px;
+}
+main .search-form input {
+    padding: 20px 100px 20px 20px;
+    background: var(--bg-dark);
+    width: 100%;
+    color: var(--color-light);
+}
+main .search-form  button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+}
+.forecast-section .row > :nth-child(even) .inner{
+    background-color: var(--bg-dark);
+}
+.forecast-section .row > :nth-child(odd) .inner{
+    background-color: var(--bg-semi-dark);
+}
+.forecast-section .row > :nth-child(even) .forecast-header{
+    background-color: var(--bg-semi-dark);
+}
+.forecast-section .row >:nth-child(odd) .forecast-header{
+    background-color: var(--bg-dark);
+}
+.forecast-card .inner{
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    overflow: hidden;
+}
+.forecast-card .forecast-header{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px;
+}
+.forecast-card .forecast-content{
+    padding: 10px 20px;
+    min-height: 400px;
+}
+.forecast-card.week-day .forecast-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.forecast-card .forecast-content .location {
+    font-size: 1.2857142857em;
+    font-weight: 400;
+}
+.forecast-card .forecast-content .degree {
+    color: var(--color-light);
+    font-weight: 700;
+}
+.forecast-card.today .forecast-content .degree {
+    font-size: 5rem;
+}
+.forecast-card .forecast-content .condition {
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+}
+
+/* End Main */
+
+/* Start Footer */
+.site-footer{
+    background: var(--bg-semi-dark);
+    padding: 50px 0;
+}
+.site-footer .subscribe-form {
+    position: relative;
+    margin-bottom: 30px;
+}
+.site-footer .subscribe-form input {
+    padding: 20px 100px 20px 20px;
+    background: var(--bg-dark);
+    width: 100%;
+    color: var(--color-light);
+}
+.site-footer .subscribe-form  button {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+.social-links a{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--bg-dark);
+    color: var(--color-secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.site-footer .copyRights{
+    margin-top: 10px;
+}
+/* End Footer */
+
+/* End Styling  */
+
