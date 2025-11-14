@@ -36,6 +36,7 @@ This is a repo that contains all Front-end Diploma projects
 |    ├── Task-2                 # JS task-2
 |    ├── Task-3                 # JS task-3
 |    ├── Task-4                 # JS task-4
+|    ├── Task-5                 # JS task-5
 |
 ├── README.md             # Documentation
 ```
@@ -71,7 +72,7 @@ DevFolio: https://devfolio-azure.vercel.app/
 
 Daniels Exam: https://mohamed-hamdy55.github.io/Front-end-Projects-Route/Exams/Daniels-Exam
 
-JS Calculator: https://mohamed-hamdy55.github.io/Front-end-Projects-Route/Javascript-Projects/Task-1
+JS Calculator: https://mohamed-hamdy55.github.io/Front-end-Projects-Route/Javascript-Projects/Calculator
 
 Js Task-1: https://mohamed-hamdy55.github.io/Front-end-Projects-Route/JavaScript-Projects/Task-1
 
@@ -80,6 +81,8 @@ Js Task-2: https://mohamed-hamdy55.github.io/Front-end-Projects-Route/JavaScript
 Js Task-3: https://mohamed-hamdy55.github.io/Front-end-Projects-Route/JavaScript-Projects/Task-3
 
 Js Task-4: https://mohamed-hamdy55.github.io/Front-end-Projects-Route/JavaScript-Projects/Task-4
+
+Js Task-5: https://mohamed-hamdy55.github.io/Front-end-Projects-Route/JavaScript-Projects/Task-5
 
 ---
 

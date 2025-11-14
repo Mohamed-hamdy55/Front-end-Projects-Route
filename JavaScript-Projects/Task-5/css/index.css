@@ -202,6 +202,15 @@ main .search-form  button {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: color var(--transition-normal) ease-in-out, background-color var(--transition-normal) ease-in-out;
+    -webkit-transition: color var(--transition-normal) ease-in-out, background-color var(--transition-normal) ease-in-out;
+    -moz-transition: color var(--transition-normal) ease-in-out, background-color var(--transition-normal) ease-in-out;
+    -ms-transition: color var(--transition-normal) ease-in-out, background-color var(--transition-normal) ease-in-out;
+    -o-transition: color var(--transition-normal) ease-in-out, background-color var(--transition-normal) ease-in-out;
+}
+.social-links a:hover{
+    color: var(--color-light);
+    background-color: var(--color-secondary);
 }
 .site-footer .copyRights{
     margin-top: 10px;

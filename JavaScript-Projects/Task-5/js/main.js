@@ -3,11 +3,12 @@ const initApp = () => {
   "use strict";
   const defaultTimeZoneCity = Intl?.DateTimeFormat?.().resolvedOptions?.().timeZone.split("/")[1] || "Cairo";
   const baseUrl = "https://api.weatherapi.com/v1";
+  const apiKey = "e16a68d5683344e6a7530143251411";
 
   // Fetch current weather data
   const getForecast = async (city = defaultTimeZoneCity) => {
     try{
-      const response = await fetch(`${baseUrl}/forecast.json?key=&q=${city}&days=3&aqi=no&alerts=no`);
+      const response = await fetch(`${baseUrl}/forecast.json?key=${apiKey}&q=${city}&days=3&aqi=no&alerts=no`);
       if(!response.ok) throw new Error(`City "${city}" not found`);
       const data = await response.json();
       console.log(data);
@@ -19,14 +20,12 @@ const initApp = () => {
 
   // Display weather data
   const displayForecast = (data) => {
-    const forecastRow = document.getElementById("forecast");
+    const forecastRow = document.getElementById("forecast-row");
     forecastRow.innerHTML = "";
     data.forecast.forecastday.forEach(day => {
-      const col = document.createElement("div");
       const isToday = new Date().toISOString().split('T')[0] === day.date;
       const dayName = isToday ? "Today" : new Date(day.date).toLocaleDateString(undefined, { weekday: 'long' });
-      col.className = "col-md-4 mb-3";
-      col.innerHTML = `
+      forecastRow.innerHTML += `
           <div class="forecast-card ${isToday ? "today" : "week-day"} col-lg-4">
               <div class="inner">
                 <div class="forecast-header" id="today">
@@ -34,7 +33,7 @@ const initApp = () => {
                   <div class=" date">${day.date}</div>
                 </div>
                 <div class="forecast-content" id="current">
-                  <div class="location">${data.location.name}</div>
+                  ${isToday ? `<div class="location">${data.location.name}</div>` : ''}
                   <div class="degree">
                       <div class="num">${day.day.avgtemp_c}<sup>o</sup>C</div>
                     
@@ -47,12 +46,11 @@ const initApp = () => {
                   ${isToday ? `
                   <span><img src="images/icon-umberella.png" alt=""> ${day.day.daily_chance_of_rain}%</span>
                   <span><img src="images/icon-wind.png" alt=""> ${day.day.maxwind_kph}km/h</span>
-                  <span><img src="images/icon-compass.png" alt=""> ${day.day.wind_dir}</span>
+                  <span><img src="images/icon-compass.png" alt=""> East</span>
                   ` : ''}
                 </div>
               </div>
             </div>`;
-      forecastRow.appendChild(col);
     });
   };
 
